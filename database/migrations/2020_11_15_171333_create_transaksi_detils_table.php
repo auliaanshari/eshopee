@@ -17,7 +17,7 @@ class CreateTransaksiDetilsTable extends Migration
             $table->id();
             $table->foreignId('transaksi_id');
             $table->foreignId('barang_id');
-            $table->integer('jumlah');
+            $table->string('jumlah');
             $table->integer('harga_beli');
             $table->double('discount');
             $table->timestamps();

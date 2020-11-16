@@ -22,8 +22,8 @@ class TransaksiFactory extends Factory
     public function definition()
     {
         return [
-            'tanggal' => $this->faker->date,
-            'no_resi' => $this->faker->randomNumber()
+            'tanggal' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
+            'no_resi' => $this->faker->regexify('[A-Za-z0-9]{20}')
         ];
     }
 }
